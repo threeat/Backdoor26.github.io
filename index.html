@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -25,11 +26,13 @@ body{
     line-height:1.7;
 }
 
+/* HERO */
+
 .hero{
     height:55vh;
     background:
-    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-    url('https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=1600&auto=format&fit=crop');
+    linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+    url('images/background.jpg');
     background-size:cover;
     background-position:center;
     display:flex;
@@ -51,10 +54,12 @@ body{
     opacity:0.9;
 }
 
+/* CONTAINER */
+
 .container{
-    max-width:1000px;
+    max-width:1100px;
     margin:auto;
-    padding:50px 25px;
+    padding:60px 25px;
 }
 
 .intro{
@@ -68,20 +73,24 @@ body{
 }
 
 .intro p{
-    max-width:700px;
+    max-width:750px;
     margin:auto;
     color:#555;
 }
 
+/* GRID */
+
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
+    grid-template-columns:repeat(auto-fit, minmax(320px,1fr));
     gap:30px;
 }
 
+/* CARD */
+
 .card{
     background:white;
-    border-radius:18px;
+    border-radius:20px;
     overflow:hidden;
     box-shadow:0 8px 25px rgba(0,0,0,0.08);
     transition:0.3s;
@@ -93,8 +102,11 @@ body{
 
 .card img{
     width:100%;
-    height:220px;
-    object-fit:cover;
+    height:260px;
+    object-fit:contain;
+    background:#f8f6f1;
+    padding:10px;
+    border-bottom:1px solid #eee;
 }
 
 .card-content{
@@ -102,12 +114,18 @@ body{
 }
 
 .card-content h3{
-    margin-bottom:12px;
-    font-size:24px;
+    margin-bottom:8px;
+    font-size:15px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#9b7b55;
 }
 
 .card-content p{
-    color:#666;
+    font-size:20px;
+    color:#222;
+    font-weight:500;
+    line-height:1.5;
     margin-bottom:20px;
 }
 
@@ -115,12 +133,16 @@ audio{
     width:100%;
 }
 
+/* FOOTER */
+
 .footer{
     text-align:center;
     padding:40px 20px;
     color:#666;
     font-size:14px;
 }
+
+/* MOBILE */
 
 @media(max-width:768px){
 
@@ -132,12 +154,22 @@ audio{
     font-size:28px;
 }
 
+.card img{
+    height:220px;
+}
+
+.card-content p{
+    font-size:18px;
+}
+
 }
 
 </style>
 </head>
 
 <body>
+
+<!-- HERO -->
 
 <section class="hero">
 <div class="hero-content">
@@ -146,98 +178,159 @@ audio{
 </div>
 </section>
 
+<!-- CONTENT -->
+
 <div class="container">
 
 <div class="intro">
 <h2>Museum Audio Guide</h2>
+
 <p>
-Explore the stories of Chungju through curated audio commentary.
+Explore the history, culture, and legacy of Chungju through curated audio commentary.
 Listen to each section while viewing the exhibition.
 </p>
 </div>
 
 <div class="grid">
 
+<!-- SECTION 1 -->
+
 <div class="card">
-<img src="https://images.unsplash.com/photo-1566127992631-137a642a90f4?q=80&w=1200&auto=format&fit=crop">
+<img src="images/audio1.jpg">
+
 <div class="card-content">
-<h3>Audio 1</h3>
-<p>Introduction and historical overview.</p>
+<h3>Section 1</h3>
+
+<p>
+Prehistoric Chungju: Life Begins by the River
+</p>
+
 <audio controls>
 <source src="audio1.mp3" type="audio/mpeg">
 </audio>
+
 </div>
 </div>
 
+<!-- SECTION 2 -->
+
 <div class="card">
-<img src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?q=80&w=1200&auto=format&fit=crop">
+<img src="images/audio2.jpg">
+
 <div class="card-content">
-<h3>Audio 2</h3>
-<p>Artifacts and cultural heritage.</p>
+<h3>Section 2</h3>
+
+<p>
+Symbols of Power: Bronze Age Leaders in Chungju
+</p>
+
 <audio controls>
 <source src="audio2.mp3" type="audio/mpeg">
 </audio>
+
 </div>
 </div>
 
+<!-- SECTION 3 -->
+
 <div class="card">
-<img src="https://images.unsplash.com/photo-1461360370896-922624d12aa1?q=80&w=1200&auto=format&fit=crop">
+<img src="images/audio3.jpg">
+
 <div class="card-content">
-<h3>Audio 3</h3>
-<p>Traditional life and ancient stories.</p>
+<h3>Section 3</h3>
+
+<p>
+Traces of Ancient Power: Pottery of the Three Kingdoms
+</p>
+
 <audio controls>
 <source src="audio3.mp3" type="audio/mpeg">
 </audio>
+
 </div>
 </div>
 
+<!-- SECTION 4 -->
+
 <div class="card">
-<img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop">
+<img src="images/audio4.jpg">
+
 <div class="card-content">
-<h3>Audio 4</h3>
-<p>Detailed exhibition interpretation.</p>
+<h3>Section 4</h3>
+
+<p>
+Maksaegiwa: The Floral Crown of the Roof
+</p>
+
 <audio controls>
 <source src="audio4.mp3" type="audio/mpeg">
 </audio>
+
 </div>
 </div>
 
+<!-- SECTION 5 -->
+
 <div class="card">
-<img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop">
+<img src="images/audio5.jpg">
+
 <div class="card-content">
-<h3>Audio 5</h3>
-<p>Special collection commentary.</p>
+<h3>Section 5</h3>
+
+<p>
+Chungju: A Thousand-Year Legacy of Iron
+</p>
+
 <audio controls>
 <source src="audio5.mp3" type="audio/mpeg">
 </audio>
+
 </div>
 </div>
 
+<!-- SECTION 6 -->
+
 <div class="card">
-<img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=1200&auto=format&fit=crop">
+<img src="images/audio6.jpg">
+
 <div class="card-content">
-<h3>Audio 6</h3>
-<p>Curator and preservation stories.</p>
+<h3>Section 6</h3>
+
+<p>
+Faith and Art: The Flourishing Buddhist Culture of Chungju
+</p>
+
 <audio controls>
 <source src="audio6.mp3" type="audio/mpeg">
 </audio>
+
 </div>
 </div>
 
+<!-- SECTION 7 -->
+
 <div class="card">
-<img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=1200&auto=format&fit=crop">
+<img src="images/audio7.jpg">
+
 <div class="card-content">
-<h3>Audio 7</h3>
-<p>Closing guide and additional information.</p>
+<h3>Section 7</h3>
+
+<p>
+The Tower at the Heart of the Nation: Jungangtap
+</p>
+
 <audio controls>
 <source src="audio7.mp3" type="audio/mpeg">
 </audio>
+
 </div>
 </div>
 
 </div>
 
 </div>
+
+<!-- FOOTER -->
 
 <div class="footer">
 Chungju Museum Audio Experience
